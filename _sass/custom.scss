@@ -1,7 +1,7 @@
 // Default to light theme
-$primary-color: #3a3f58;
-$background-color: #f7f8fa;
-$text-color: #333;
+$primary-color: #9978ed18;
+$background-color: #3861c079;
+$text-color: #000000;
 
 // Set theme colors based on the color_scheme variable
 @if $color_scheme == 'dark' {
