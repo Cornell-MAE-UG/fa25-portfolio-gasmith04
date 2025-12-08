@@ -34,3 +34,5 @@ While the panel height optimization helped, we still wanted to improve the irrad
 Insert more photos
 
 Insert future work with simulator (what still has yet to be done in this project)
+
+fluids
