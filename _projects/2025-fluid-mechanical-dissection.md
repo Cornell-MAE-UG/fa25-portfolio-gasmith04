@@ -49,4 +49,4 @@ We explained the device using:
 
 ### Final video
 **Link to our fluid mechanical dissection video**  
-[Watch on YouTube](https://www.youtube.com/watch?v=19PIwncbsFY)
+[Watch on YouTube](https://youtu.be/kFJW_DP0QBg)
