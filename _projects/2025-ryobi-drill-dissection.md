@@ -40,16 +40,17 @@ My role was taking the laplace transforms of the ODEs to find both the open loop
 
 After dissecting the drill, we proceeded to model it as a coupled electromechanical system where the electrical subsystem is composed of the trigger circuit and motor, while the mechanical subsystem includes the rotor, gear train, and chuck. To capture the behavior of the drill, we came up with two differential equations, one for each subsystem. The electrical ODE follows Kirchoff’s Voltage Law while the mechanical ODE follows Newton’s second law in rotation. These ODEs are coupled, showing how the input voltage v generates the motor torque Tm, and the torque yields the rotational speed. 
 
-v=Lddti+Ri+Ke , where: 
-&ndash; v is the input voltage
-&ndash; Lddti is the inductive effect of the motor windings (L is the inductance, ddti is the current derivative)
-&ndash; Ri is the voltage drop across the resistance (R is the resistance, i is the current)
-&ndash; Ke is the back EMF generated when the motor spins and produces a voltage that opposes v (Ke is the back EMF constant) 
-Tm=Jddt+b+TL , where:
-&ndash;  Tm=Kmi, the torque from the motor (Km is the motor torque constant)
-&ndash; Jddt is the angular acceleration of the rotor, gears, and chuck (J is the total rotational inertia from these components, ddt is the rotational speed derivative)
-&ndash; b is the damping torque that results from friction (b represents the losses from friction,  is the rotational speed)
-&ndash; TL is the torque from the load when drilling into a material ( TL=0 in free space)
+$v = L\frac{d}{dt}i + Ri + K_{e}\omega$ , where: 
+<br>&ndash; $v$ is the input voltage
+<br>&ndash; $L\frac{d}{dt}i$ is the inductive effect of the motor windings ($L$ is the inductance, $\frac{d}{dt}$ is the current derivative)
+<br>&ndash; $Ri$ is the voltage drop across the resistance ($R$ is the resistance, $i$ is the current)
+<br>&ndash; $K_{e}$ is the back EMF generated when the motor spins and produces a voltage that opposes $v$ ($K_{e}$ is the back EMF constant) 
+<br>
+$T_{m} = J\frac{d}{dt}\omega + b\omega + T_{L}$ , where:
+<br>&ndash;  $T_{m}=K_{m}i$, the torque from the motor ($K_{m}$ is the motor torque constant)
+<br>&ndash; $J\frac{d}{dt}\omega$ is the angular acceleration of the rotor, gears, and chuck ($J$ is the total rotational inertia from these components, $\frac{d}{dt}\omega$ is the rotational speed derivative)
+<br>&ndash; $b\omega$ is the damping torque that results from friction ($b$ represents the losses from friction, $\omega$ is the rotational speed)
+<br>&ndash; $T_{L}$ is the torque from the load when drilling into a material ( $T_{L} = 0$ in free space)
 
 Rearranging in terms of the highest derivatives, the ODEs become: 
 
