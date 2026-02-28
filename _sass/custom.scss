@@ -1,45 +1,49 @@
 // Default to light theme
-$primary-color: #0f2742;
-$background-color: #e7edf2;
-$text-color: #18212b;
-$surface-color: #ffffff;
-$surface-muted: #f4f7fa;
-$border-color: rgba(15, 39, 66, 0.12);
-$accent-color: #2b6b88;
-$accent-soft: #d7e6ee;
-$shadow-soft: 0 24px 55px rgba(15, 39, 66, 0.12);
+$primary-color: #233246;
+$background-color: #d8d3ca;
+$text-color: #1e1b18;
+$surface-color: #f3efe8;
+$surface-muted: #e8e0d5;
+$border-color: rgba(35, 50, 70, 0.2);
+$accent-color: #8a4b3d;
+$accent-soft: #d9c0ad;
+$support-color: #8e6139;
+$shadow-soft: 0 10px 24px rgba(26, 29, 34, 0.12);
 
 // Set theme colors based on the color_scheme variable
 @if $color_scheme == 'dark' {
-  $primary-color: #d7e6ee;
-  $background-color: #0f1720;
-  $text-color: #edf4f8;
-  $surface-color: #16222d;
-  $surface-muted: #1c2c39;
-  $border-color: rgba(215, 230, 238, 0.12);
-  $accent-color: #7cb8d1;
-  $accent-soft: rgba(124, 184, 209, 0.14);
-  $shadow-soft: 0 24px 55px rgba(0, 0, 0, 0.35);
+  $primary-color: #c4c0b8;
+  $background-color: #1b1f25;
+  $text-color: #eee9e0;
+  $surface-color: #252b33;
+  $surface-muted: #2e353d;
+  $border-color: rgba(196, 192, 184, 0.14);
+  $accent-color: #b46a58;
+  $accent-soft: rgba(180, 106, 88, 0.16);
+  $support-color: #b07b44;
+  $shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.28);
 } @else if $color_scheme == 'aqua' {
-  $primary-color: #598392;
-  $background-color: #eff6e0;
-  $text-color: #01161e;
-  $surface-color: #ffffff;
-  $surface-muted: #f7fbf1;
-  $border-color: rgba(1, 22, 30, 0.1);
-  $accent-color: #3b6f80;
-  $accent-soft: #ddecef;
-  $shadow-soft: 0 24px 55px rgba(1, 22, 30, 0.1);
+  $primary-color: #49626d;
+  $background-color: #d9ddd0;
+  $text-color: #152026;
+  $surface-color: #f3f5ed;
+  $surface-muted: #e6eadf;
+  $border-color: rgba(21, 32, 38, 0.12);
+  $accent-color: #7d5849;
+  $accent-soft: #dacdc3;
+  $support-color: #876948;
+  $shadow-soft: 0 10px 24px rgba(21, 32, 38, 0.12);
 } @else if $color_scheme == 'desert' {
-  $primary-color: #925959;
-  $background-color: #f6f1e0;
-  $text-color: #1e0101;
-  $surface-color: #fffdf8;
-  $surface-muted: #fbf6ec;
-  $border-color: rgba(30, 1, 1, 0.1);
-  $accent-color: #a86b4e;
-  $accent-soft: #f2e1d2;
-  $shadow-soft: 0 24px 55px rgba(30, 1, 1, 0.1);
+  $primary-color: #6f4c43;
+  $background-color: #e7dcc8;
+  $text-color: #241813;
+  $surface-color: #f7f1e5;
+  $surface-muted: #ede1cf;
+  $border-color: rgba(36, 24, 19, 0.12);
+  $accent-color: #9d5d39;
+  $accent-soft: #e4cfb8;
+  $support-color: #8d6847;
+  $shadow-soft: 0 10px 24px rgba(36, 24, 19, 0.1);
 }
 
 :root {
@@ -77,8 +81,8 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   line-height: 1.75;
   background:
-    radial-gradient(circle at top right, rgba(43, 107, 136, 0.12), transparent 34%),
-    linear-gradient(180deg, #eef3f7 0%, $background-color 26%, #dfe8ef 100%);
+    linear-gradient(180deg, rgba(35, 50, 70, 0.08), rgba(35, 50, 70, 0.08)),
+    $background-color;
   background-color: $background-color;
   color: $text-color;
   margin: 0;
@@ -104,8 +108,7 @@ strong {
   top: 0;
   z-index: 1000;
   padding: 20px 0 0;
-  background: linear-gradient(180deg, rgba(231, 237, 242, 0.96), rgba(231, 237, 242, 0.82));
-  backdrop-filter: blur(12px);
+  background: transparent;
 }
 
 .site-shell {
@@ -114,10 +117,10 @@ strong {
 
 .navbar {
   padding: 0;
-  border: 1px solid $border-color;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 14px 32px rgba(15, 39, 66, 0.08);
+  border: 2px solid $primary-color;
+  border-radius: 0;
+  background: $surface-color;
+  box-shadow: $shadow-soft;
 }
 
 .navbar > .container {
@@ -146,8 +149,9 @@ strong {
 }
 
 .navbar-toggler {
-  border: 1px solid $border-color;
+  border: 2px solid $primary-color;
   padding: 6px 10px;
+  border-radius: 0;
 }
 
 .navbar-toggler:focus {
@@ -162,16 +166,20 @@ strong {
   position: relative;
   margin-left: 8px;
   padding: 10px 14px !important;
-  border-radius: 999px;
+  border: 1px solid transparent;
+  border-radius: 0;
   color: rgba(24, 33, 43, 0.8);
   font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.active {
   color: $primary-color;
-  background: $accent-soft;
+  background: rgba(138, 75, 61, 0.08);
+  border-color: rgba(138, 75, 61, 0.2);
 }
 
 .site-main {
@@ -180,11 +188,9 @@ strong {
 
 .page-surface {
   padding: clamp(24px, 5vw, 56px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 32px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 247, 250, 0.94)),
-    $surface-color;
+  border: 2px solid $border-color;
+  border-radius: 0;
+  background: $surface-color;
   box-shadow: $shadow-soft;
 }
 
@@ -239,9 +245,9 @@ strong {
 }
 
 .profile-image, .project-image {
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(15, 39, 66, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0;
+  box-shadow: 0 8px 18px rgba(26, 29, 34, 0.12);
+  border: 2px solid rgba(35, 50, 70, 0.14);
 }
 
 .gallery-container {
@@ -259,13 +265,13 @@ strong {
 
 .gallery-item {
   padding: 16px;
-  border: 1px solid $border-color;
-  border-radius: 24px;
+  border: 2px solid $border-color;
+  border-radius: 0;
   background: $surface-color;
   overflow: hidden;
   text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  box-shadow: 0 10px 24px rgba(15, 39, 66, 0.06);
+  box-shadow: 0 6px 16px rgba(26, 29, 34, 0.08);
 }
 
 .gallery-item img {
@@ -274,7 +280,7 @@ strong {
   display: block;
   object-fit: cover;
   object-position: center;
-  border-radius: 16px;
+  border-radius: 0;
   box-shadow: none;
 }
 
@@ -290,9 +296,9 @@ strong {
 }
 
 .gallery-item:hover {
-  transform: translateY(-6px);
-  border-color: rgba(43, 107, 136, 0.22);
-  box-shadow: 0 18px 34px rgba(15, 39, 66, 0.1);
+  transform: translateY(-4px);
+  border-color: rgba(138, 75, 61, 0.34);
+  box-shadow: 0 12px 24px rgba(26, 29, 34, 0.12);
 }
 
 .project-hero {
@@ -307,9 +313,10 @@ strong {
 .tech-stack {
   margin-top: 28px;
   padding: 18px 20px;
-  border-radius: 18px;
+  border-radius: 0;
   background: $surface-muted;
-  border: 1px solid $border-color;
+  border: 2px solid $border-color;
+  border-left: 6px solid $support-color;
 }
 
 .back-arrow {
@@ -341,7 +348,7 @@ strong {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: $accent-color;
+  color: $support-color;
 }
 
 .lead {
@@ -363,10 +370,12 @@ strong {
   justify-content: center;
   min-height: 48px;
   padding: 12px 18px;
-  border-radius: 999px;
+  border-radius: 0;
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .btn:hover {
@@ -374,10 +383,10 @@ strong {
 }
 
 .btn-primary {
-  border: 1px solid $primary-color;
+  border: 2px solid $primary-color;
   background: $primary-color;
   color: #ffffff;
-  box-shadow: 0 12px 24px rgba(15, 39, 66, 0.18);
+  box-shadow: 4px 4px 0 rgba(142, 97, 57, 0.35);
 }
 
 .btn-primary:hover,
@@ -388,15 +397,15 @@ strong {
 }
 
 .btn-outline-primary {
-  border: 1px solid rgba(43, 107, 136, 0.22);
-  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid $accent-color;
+  background: transparent;
   color: $primary-color;
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
-  background: $accent-soft;
-  border-color: rgba(43, 107, 136, 0.26);
+  background: rgba(138, 75, 61, 0.08);
+  border-color: $accent-color;
   color: $primary-color;
 }
 
@@ -414,9 +423,10 @@ strong {
 
 .info-card {
   padding: 20px;
-  border-radius: 22px;
+  border-radius: 0;
   background: $surface-muted;
-  border: 1px solid $border-color;
+  border: 2px solid $border-color;
+  border-top: 5px solid $accent-color;
 }
 
 .info-card p {
@@ -441,10 +451,10 @@ strong {
   justify-content: space-between;
   gap: 16px;
   padding: 22px 28px;
-  border: 1px solid $border-color;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 12px 30px rgba(15, 39, 66, 0.06);
+  border: 2px solid $primary-color;
+  border-radius: 0;
+  background: $surface-muted;
+  box-shadow: none;
 }
 
 .footer-content p {
@@ -454,7 +464,8 @@ strong {
 }
 
 iframe {
-  border-radius: 18px;
+  border-radius: 0;
+  border: 2px solid $border-color;
 }
 
 hr {
