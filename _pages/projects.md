@@ -1,6 +1,6 @@
 ---
 layout: default
-title: <Your Name> - Portfolio
+title: Garrett Smith - Projects
 permalink: /projects/
 ---
 
