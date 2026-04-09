@@ -11,7 +11,7 @@ permalink: /cv/
 ---
 
 #### Objective
-Mechanical Engineering junior with experience in CAD/DFM, design reviews, and test-rig integration, focused on mechanical design, rapid prototyping, and system integration. Interested in robotics automation and mechatronic systems. 
+Mechanical Engineering junior with experience in CAD/DFM, design reviews, and test-rig integration, focused on mechanical design, rapid prototyping, and system integration. Interested product development and mechatronic systems.
 
 ---
 
