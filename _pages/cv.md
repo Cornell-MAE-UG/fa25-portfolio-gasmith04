@@ -39,7 +39,7 @@ Mechanical Engineering junior with experience in CAD/DFM, design reviews, and te
   - Used fluid mechanical concepts and analysis to fully explain how the devide works
 
 - **Torque Wrench Design**:  
-  **Designed and modeled a torque wrench to satisfy FoS requirements. Performed FEA on the model to confirm all requirements were met**  
+  *Designed and modeled a torque wrench to satisfy FoS requirements. Performed FEA on the model to confirm all requirements were met*  
   - Met all requirements with an ultra-thin handle design (thickness of only 0.2 in.) to allow use on bolts in extremely tight locations.
 
 
@@ -59,6 +59,7 @@ Mechanical Engineering junior with experience in CAD/DFM, design reviews, and te
   *Split water bottle product, framed around easy cleanability + leakproof sealing.*  
   - Worked through failures to finish the semester with a fully working prototype.
   - Planned the manufacturing path and ensured it was scalable for production
+
 ---
 
 #### Work Experience
