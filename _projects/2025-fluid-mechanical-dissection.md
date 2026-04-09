@@ -2,7 +2,7 @@
 layout: project
 title: JunAir Oil-less Air Compressor Dissection
 description: 
-technologies: MATLAB
+technologies: [MATLAB, Hands on deconstruction and reassembly]
 image: /assets/images/fluids_airc_cov_photo.png
 ---
 

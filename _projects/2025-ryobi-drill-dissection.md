@@ -2,7 +2,7 @@
 layout: project
 title: Ryobi Drill Dissection
 description: 
-technologies: MATLAB
+technologies: [MATLAB, Hands on deconstruction and assembly]
 image: /assets/images/sdissection-cover.png
 ---
 

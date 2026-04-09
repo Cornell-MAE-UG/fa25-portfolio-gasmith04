@@ -2,7 +2,7 @@
 layout: project
 title: Open Design Project
 description: Designed and prototyped a split water bottle, focused on easy and convenient clean-ability
-technologies: MATLAB
+technologies: [Autodesk Fusion360]
 image: /assets/images/Open-up_sketch.png
 ---
 ### Purpose and Background
