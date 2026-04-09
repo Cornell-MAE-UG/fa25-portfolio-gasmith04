@@ -6,6 +6,7 @@ technologies: MATLAB
 image: /assets/images/fluids_airc_cov_photo.png
 ---
 
+### Purpose and Background
 For this fluid mechanics project, we were tasked with taking apart a machine, then studying it in order to explain how it works using fluid mechanical concepts and terminology. My group dissected a Jun-Air Oil-less Rocking Piston Air Compressor. My role was examining the internal components, mapping out the fluid path, taking measurements to do analysis on both the compression and pressure ratio of the pistons. 
 <br>
 The compressor is a dual-action, positive-displacement reciprocating air pump. As a positive-displacement device, it moves air by trapping a fixed volume and mechanically reducing its space, making the delivered flow rate primarily a function of RPM. Its reciprocating motion varies the chamber volume and uses check valves to direct air through the system. Dual-action operation compresses air on both piston strokes, doubling the effective flow rate and providing smoother, more continuous delivery with pistons 180° out of phase. Bursting is a common failure mode for these types of pumps, and in order to prevent this, the designers ensured there was a relief valve to vent the air when internal pressure exceeds a safe threshold.
