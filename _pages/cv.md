@@ -21,8 +21,8 @@ Mechanical Engineering junior with experience in CAD/DFM, design reviews, and te
   GPA: 3.8/4.0 | Graduation: May, 2027
 
 - **Sewickley Academy**  
-  *High School Diploma*  
-  Graduation: [August, 2023]
+  *High School Diploma* 
+  GPA: 4.0 |Graduation: August, 2023
 
 ---
 
